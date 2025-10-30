@@ -32,12 +32,9 @@
   @apply text-gray-400 text-sm mt-2
 }
 
-.project-link {
-  @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300
-}
 
 .card{
-  @apply bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105
+  @apply relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105
 }
 
 .card-image-container {

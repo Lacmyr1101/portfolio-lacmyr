@@ -1,3 +1,4 @@
+import React from "react";
 import { type Project } from "../models/project";
 import ProjectItem from "./project-item";
 

@@ -9,9 +9,6 @@ const ProjectItem = (project: Omit<Project, "id">) => {
           alt={project.title}
           className="w-full h-full object-cover object-center"
         />
-        <div className="card-overlay">
-            <span className="card-overlay-hover">Mas Informacion</span>
-        </div>
       </div>
 
       <div className="card-content">
@@ -20,14 +17,10 @@ const ProjectItem = (project: Omit<Project, "id">) => {
           Technologies: {project.technologies.join(", ")}
         </h4>
         <p className="description">{project.description}</p>
-        <a
-          href={project.projectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link"
-        >
-          View Project
-        </a>
+      </div>
+
+      <div className="card-overlay">
+        <span className="card-overlay-hover">Mas Informacion</span>
       </div>
     </div>
   );
