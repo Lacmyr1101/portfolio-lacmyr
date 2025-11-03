@@ -34,7 +34,7 @@
 
 
 .card{
-  @apply relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105
+  @apply relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer hover:scale-105
 }
 
 .card-image-container {
