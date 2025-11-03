@@ -1,4 +1,5 @@
 import type { Project } from "../models/project";
+import TechIcon from "./tech-icons";
 
 const ProjectItem = (project: Omit<Project, "id">) => {
   return (
@@ -13,9 +14,15 @@ const ProjectItem = (project: Omit<Project, "id">) => {
 
       <div className="card-content">
         <h3 className="title">{project.title}</h3>
-        <h4 className="subtitle">
-          Technologies: {project.technologies.join(", ")}
-        </h4>
+        <h4 className="subtitle">Technologies:</h4>
+        <div className="tech-list" aria-hidden={false}>
+          {project.technologies.map((t) => (
+            <span key={t} className="tech-item" title={t} style={{marginRight:8, display:'inline-flex', alignItems:'center'}}>
+              <TechIcon tech={t} size={18} />
+              <span style={{fontSize:12, color:'#666', marginLeft:4}}>{t}</span>
+            </span>
+          ))}
+        </div>
         <p className="description">{project.description}</p>
       </div>
 
