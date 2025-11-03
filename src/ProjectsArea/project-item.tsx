@@ -17,10 +17,24 @@ const ProjectItem = (project: Omit<Project, "id">) => {
         <h4 className="subtitle">Technologies:</h4>
         <div className="tech-list" aria-hidden={false}>
           {project.technologies.map((t) => (
-            <span key={t} className="tech-item" title={t} style={{marginRight:8, display:'inline-flex', alignItems:'center'}}>
-              <TechIcon tech={t} size={18} />
-              <span style={{fontSize:12, color:'#666', marginLeft:4}}>{t}</span>
-            </span>
+            <button
+              key={t}
+              type="button"
+              className="tech-item"
+              title={t}
+              aria-label={t}
+              style={{
+                marginRight: 8,
+                display: "inline-flex",
+                alignItems: "center",
+                background: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
+              <TechIcon tech={t} size={20} />
+            </button>
           ))}
         </div>
         <p className="description">{project.description}</p>

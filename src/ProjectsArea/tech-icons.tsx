@@ -1,69 +1,68 @@
-import React from "react";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiFirebase,
+  SiRedux,
+  SiVuedotjs,
+  SiMongodb,
+  SiPrisma,
+  SiPostgresql,
+  SiVercel,
+  SiExpo,
+  SiSupabase,
+  SiD3Dotjs,
+  SiSass,
+  SiStripe,
+  SiNextdotjs,
+  SiChartdotjs,
+} from "react-icons/si";
 
-// Devuelve un JSX con un "icono" para la tecnología dada.
-// Usamos emojis para evitar depender de librerías externas. Puedes cambiar a SVGs o react-icons más adelante.
-export default function TechIcon({ tech, size = 16 }: { tech: string; size?: number }) {
-  const commonStyle: React.CSSProperties = { fontSize: size, display: "inline-block", marginRight: 6 };
-
+// Mapea nombres / palabras clave a componentes de icono de react-icons.
+export default function TechIcon({ tech, size = 20 }: { tech: string; size?: number }) {
   const key = tech.toLowerCase();
-  switch (true) {
-    case /react/.test(key):
-      return <span style={commonStyle} title={tech}>⚛️</span>;
-    case /next/.test(key):
-      return <span style={commonStyle} title={tech}>⧉</span>;
-    case /type(script)?/.test(key):
-      return <span style={commonStyle} title={tech}>🔷</span>;
-    case /stripe/.test(key):
-      return <span style={commonStyle} title={tech}>💳</span>;
-    case /tailwind/.test(key):
-      return <span style={commonStyle} title={tech}>🌬️</span>;
-    case /firebase/.test(key):
-      return <span style={commonStyle} title={tech}>🔥</span>;
-    case /material/.test(key) || /mui/.test(key):
-      return <span style={commonStyle} title={tech}>🧩</span>;
-    case /redux/.test(key):
-      return <span style={commonStyle} title={tech}>🔁</span>;
-    case /vue/.test(key):
-      return <span style={commonStyle} title={tech}>🟩</span>;
-    case /node/.test(key):
-      return <span style={commonStyle} title={tech}>🟢</span>;
-    case /mongo/.test(key) || /mongodb/.test(key):
-      return <span style={commonStyle} title={tech}>🍃</span>;
-    case /prisma/.test(key):
-      return <span style={commonStyle} title={tech}>🔷</span>;
-    case /postgres/.test(key) || /postgresql/.test(key):
-      return <span style={commonStyle} title={tech}>🐘</span>;
-    case /vercel/.test(key):
-      return <span style={commonStyle} title={tech}>⬛</span>;
-    case /expo/.test(key):
-      return <span style={commonStyle} title={tech}>📱</span>;
-    case /supabase/.test(key):
-      return <span style={commonStyle} title={tech}>🟦</span>;
-    case /d3/.test(key):
-    case /chart/.test(key):
-      return <span style={commonStyle} title={tech}>📊</span>;
-    case /sass/.test(key) || /scss/.test(key):
-      return <span style={commonStyle} title={tech}>🎨</span>;
-    default:
-      // Si no está mapeada, mostrar la primera letra en un círculo simple
-      return (
-        <span
-          style={{
-            ...commonStyle,
-            width: size,
-            height: size,
-            lineHeight: `${size}px`,
-            textAlign: "center",
-            borderRadius: size,
-            background: "#eee",
-            color: "#333",
-            fontSize: size * 0.7,
-            display: "inline-block",
-          }}
-          title={tech}
-        >
-          {tech[0]?.toUpperCase() || "?"}
-        </span>
-      );
-  }
+
+  // mapping simple usando condiciones; puedes ampliarlo con más casos.
+  if (/react/.test(key)) return <FaReact size={size} title={tech} aria-label={tech} />;
+  if (/next/.test(key)) return <SiNextdotjs size={size} title={tech} aria-label={tech} />;
+  if (/type(script)?/.test(key)) return <SiTypescript size={size} title={tech} aria-label={tech} />;
+  if (/tailwind/.test(key)) return <SiTailwindcss size={size} title={tech} aria-label={tech} />;
+  if (/stripe/.test(key)) return <SiStripe size={size} title={tech} aria-label={tech} />;
+  if (/firebase/.test(key)) return <SiFirebase size={size} title={tech} aria-label={tech} />;
+  // material / mui: no hay icono específico en 'si' con nombre consistente; usar fallback
+  if (/redux/.test(key)) return <SiRedux size={size} title={tech} aria-label={tech} />;
+  if (/vue/.test(key)) return <SiVuedotjs size={size} title={tech} aria-label={tech} />;
+  if (/node/.test(key)) return <FaNodeJs size={size} title={tech} aria-label={tech} />;
+  if (/mongo/.test(key) || /mongodb/.test(key)) return <SiMongodb size={size} title={tech} aria-label={tech} />;
+  if (/prisma/.test(key)) return <SiPrisma size={size} title={tech} aria-label={tech} />;
+  if (/post(gres)?/.test(key)) return <SiPostgresql size={size} title={tech} aria-label={tech} />;
+  if (/vercel/.test(key)) return <SiVercel size={size} title={tech} aria-label={tech} />;
+  if (/expo/.test(key)) return <SiExpo size={size} title={tech} aria-label={tech} />;
+  if (/supabase/.test(key)) return <SiSupabase size={size} title={tech} aria-label={tech} />;
+  if (/d3/.test(key)) return <SiD3Dotjs size={size} title={tech} aria-label={tech} />;
+  if (/chart/.test(key)) return <SiChartdotjs size={size} title={tech} aria-label={tech} />;
+  if (/sass/.test(key) || /scss/.test(key)) return <SiSass size={size} title={tech} aria-label={tech} />;
+
+  // fallback: letra inicial en un círculo simple (sin dependencia externa)
+  const Circle = ({ label }: { label: string }) => (
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: size,
+        height: size,
+        borderRadius: size,
+        background: "#eee",
+        color: "#333",
+        fontSize: size * 0.6,
+      }}
+      title={tech}
+      aria-label={tech}
+    >
+      {label}
+    </span>
+  );
+
+  return <Circle label={(tech[0] || "?").toUpperCase()} />;
 }
