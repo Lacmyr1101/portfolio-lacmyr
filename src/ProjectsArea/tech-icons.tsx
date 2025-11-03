@@ -18,11 +18,9 @@ import {
   SiChartdotjs,
 } from "react-icons/si";
 
-// Mapea nombres / palabras clave a componentes de icono de react-icons.
 export default function TechIcon({ tech, size = 20 }: { tech: string; size?: number }) {
   const key = tech.toLowerCase();
 
-  // mapping simple usando condiciones; puedes ampliarlo con más casos.
   if (/react/.test(key)) return <FaReact size={size} title={tech} aria-label={tech} />;
   if (/next/.test(key)) return <SiNextdotjs size={size} title={tech} aria-label={tech} />;
   if (/type(script)?/.test(key)) return <SiTypescript size={size} title={tech} aria-label={tech} />;

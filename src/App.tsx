@@ -65,9 +65,11 @@ function App() {
       technologies: ["React Native", "Expo", "Supabase", "TypeScript"],
     },
   ];
-  return <>
-    <ProjectsGrid project={projectsList} />
-  </>;
+  return (
+    <>
+      <ProjectsGrid project={projectsList} />
+    </>
+  );
 }
 
 export default App;

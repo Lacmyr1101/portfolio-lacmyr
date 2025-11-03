@@ -14,27 +14,10 @@ const ProjectItem = (project: Omit<Project, "id">) => {
 
       <div className="card-content">
         <h3 className="title">{project.title}</h3>
-        <h4 className="subtitle">Technologies:</h4>
-        <div className="tech-list" aria-hidden={false}>
+        <div className="tech-list flex justify-around align-middle" aria-hidden={false}>
           {project.technologies.map((t) => (
-            <button
-              key={t}
-              type="button"
-              className="tech-item"
-              title={t}
-              aria-label={t}
-              style={{
-                marginRight: 8,
-                display: "inline-flex",
-                alignItems: "center",
-                background: "transparent",
-                border: "none",
-                padding: 0,
-                cursor: "pointer",
-              }}
-            >
-              <TechIcon tech={t} size={20} />
-            </button>
+            <TechIcon key={t} tech={t} size={20} />
+            
           ))}
         </div>
         <p className="description">{project.description}</p>
