@@ -50,8 +50,8 @@ function ProjectWindow({ project, onClose }: Props) {
             aria-hidden={closing}
         >
             {/* modal content - stop propagation so clicks inside don't close */}
-            <div
-                className={`bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-auto relative transform transition-all duration-200 ${visible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
+                    <div
+                        className={`bg-white text-gray-900 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-auto relative transform transition-all duration-200 ${visible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
                 onClick={(e) => e.stopPropagation()}
                 role="dialog"
                 aria-modal="true"
@@ -78,7 +78,7 @@ function ProjectWindow({ project, onClose }: Props) {
                         </div>
 
                         <div className="md:w-1/2 w-full">
-                            <h2 id="project-window-title" className="text-2xl font-bold mb-3">{project.title}</h2>
+                              <h2 id="project-window-title" className="text-2xl font-bold mb-3 text-gray-900">{project.title}</h2>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.technologies.map((t) => (
                                     <span key={t} className="inline-flex items-center px-2 py-1 rounded-md bg-gray-50">
@@ -98,7 +98,9 @@ function ProjectWindow({ project, onClose }: Props) {
                                 </a>
                             </div>
 
-                            <p className="text-gray-700">{project.description}</p>
+                              <p className="text-gray-700">{project.description}</p>
+                              {/* Mostrar texto alternativo como caption si la imagen falla o para accesibilidad visual */}
+                              <p className="text-sm text-gray-500 mt-2">{project.title}</p>
                         </div>
                     </div>
 
