@@ -14,7 +14,7 @@ const ProjectItem = ({ project, onOpen }: { project: Project; onOpen?: () => voi
 
       <div className="card-content">
         <h3 className="title">{project.title}</h3>
-        <div className="tech-list flex flex-wrap gap-2" aria-hidden={false}>
+        <div className="tech-list flex justify-center flex-wrap gap-2" aria-hidden={false}>
           {project.technologies.map((t) => (
             <TechIcon key={t} tech={t} size={20} />
           ))}
