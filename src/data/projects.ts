@@ -6,7 +6,7 @@ export const projectsList: Project[] = [
     title: "E-Commerce Platform",
     description:
       "Una plataforma de comercio electrónico completa con carrito de compras, pagos integrados y panel de administración.",
-    imageUrl: "/modern-ecommerce-interface.png",
+    imageUrl: "../../public/images/projects/e-commerce-platform.png",
     projectUrl: "https://example.com/project1",
     githubUrl: 'verga.com/example/project1',
     technologies: [
@@ -22,7 +22,7 @@ export const projectsList: Project[] = [
     title: "Task Management App",
     description:
       "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones.",
-    imageUrl: "/task-management-dashboard.png",
+    imageUrl: "../../public/images/projects/task-management-app.png",
     projectUrl: "https://example.com/project2",
     githubUrl: 'verga.com/example/project2',
     technologies: ["React", "Firebase", "Material-UI", "Redux"],
@@ -32,7 +32,7 @@ export const projectsList: Project[] = [
     title: "Weather Dashboard",
     description:
       "Dashboard meteorológico con pronósticos detallados, mapas interactivos y alertas personalizadas.",
-    imageUrl: "/weather-dashboard-maps.png",
+    imageUrl: "../../public/images/projects/weather-dashboard.png",
     projectUrl: "https://example.com/project3",
     githubUrl: 'verga.com/example/project3',
     technologies: ["Vue.js", "OpenWeather API", "Chart.js", "Sass"],
@@ -42,7 +42,7 @@ export const projectsList: Project[] = [
     title: "Social Media Analytics",
     description:
       "Herramienta de análisis de redes sociales con métricas en tiempo real y reportes automatizados.",
-    imageUrl: "/analytics-dashboard.png",
+    imageUrl: "../../public/images/projects/social-media-analytics.png",
     projectUrl: "https://example.com/project4",
     githubUrl: 'verga.com/example/project4',
     technologies: ["React", "D3.js", "Node.js", "MongoDB"],
@@ -52,7 +52,7 @@ export const projectsList: Project[] = [
     title: "Portfolio Builder",
     description:
       "Constructor de portfolios con plantillas personalizables, editor visual y hosting integrado.",
-    imageUrl: "/portfolio-builder-interface.png",
+    imageUrl: "../../public/images/projects/portfolio-builder.png",
     projectUrl: "https://example.com/project5",
     githubUrl: 'verga.com/example/project5',
     technologies: ["Next.js", "Prisma", "PostgreSQL", "Vercel"],
@@ -62,7 +62,7 @@ export const projectsList: Project[] = [
     title: "Fitness Tracker",
     description:
       "Aplicación de seguimiento de fitness con planes de entrenamiento, estadísticas y comunidad.",
-    imageUrl: "/fitness-tracking-app.png",
+    imageUrl: "../../public/images/projects/fitness-tracker.png",
     projectUrl: "https://example.com/project6",
     githubUrl: 'verga.com/example/project6',
     technologies: ["React Native", "Expo", "Supabase", "TypeScript"],

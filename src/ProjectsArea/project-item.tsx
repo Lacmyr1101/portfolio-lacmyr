@@ -1,5 +1,5 @@
 import type { Project } from "../models/project";
-import TechIcon from "./tech-icons";
+import TechIcon from "../tech-icons";
 
 const ProjectItem = ({ project, onOpen }: { project: Project; onOpen?: () => void }) => {
   return (

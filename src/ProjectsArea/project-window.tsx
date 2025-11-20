@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Project } from "../models/project";
-import TechIcon from "./tech-icons";
+import TechIcon from "../tech-icons";
 
 type Props = {
   project: Project | null;
