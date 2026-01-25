@@ -64,7 +64,7 @@ export default function TechIcon({ tech, size = 20 }: { tech: string; size?: num
         height: size,
         borderRadius: size,
         background: "#eee",
-        color: "#333",
+        color: "currentColor",
         fontSize: size * 0.6,
       }}
       title={tech}

@@ -3,4 +3,5 @@ export interface Social {
     name: string;
     iconURL: string;
     url: string;
+    colors?: string[];
 }
