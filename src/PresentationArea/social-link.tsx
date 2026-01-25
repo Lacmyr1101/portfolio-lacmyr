@@ -12,6 +12,7 @@ function SocialLink(social: Omit<Social, "id">) {
       target="_blank"
       rel="noopener noreferrer"
       className="social-link px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm"
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       style={{ ['--social-gradient' as any]: gradient }}
     >
       <span className="social-icon">
