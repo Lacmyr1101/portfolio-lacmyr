@@ -9,11 +9,14 @@
 @tailwind utilities;
 
 .page-container {
-  @apply min-h-screen w-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8;
+  @apply min-h-screen py-12 px-4 sm:px-6 lg:px-8;
 }
 
 .page-content {
-  @apply max-w-7xl mx-auto;
+  @apply max-w-7xl mx-auto h-5/6 overflow-y-scroll border-2 rounded-lg;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .grid-container {
@@ -30,10 +33,15 @@
 
 .description {
   @apply text-gray-400 text-sm mt-2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita a 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card {
-  @apply relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer hover:scale-105;
+  @apply relative h-96 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer hover:scale-105;
+  background-color: #1e1e1e;
 }
 
 .card-image-container {
@@ -251,4 +259,16 @@ button:focus-visible {
       transition-delay: 0.25s;
     }
   }
+}
+
+.projects-area {
+  padding: 24px;
+  border-radius: 16px;
+  height: 100vh;
+}
+
+.projects-panel {
+  padding: 20px;
+  border-radius: 12px;
+  
 }

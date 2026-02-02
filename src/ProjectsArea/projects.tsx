@@ -11,18 +11,25 @@ const ProjectsGrid = ({ project }: Props) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="page-container">
+    <div className="page-container projects-area">
+      <h1 className="title">My Projects</h1>
       <div className="page-content">
-        <h1 className="title">My Projects</h1>
-        <div className="grid-container">
+        <div className="grid-container projects-panel">
           {project.map((proj) => (
-            <ProjectItem key={proj.id} project={proj} onOpen={() => setSelectedProject(proj)} />
+            <ProjectItem
+              key={proj.id}
+              project={proj}
+              onOpen={() => setSelectedProject(proj)}
+            />
           ))}
         </div>
       </div>
 
       {/* Modal */}
-      <ProjectWindow project={selectedProject} onClose={() => setSelectedProject(null)} />
+      <ProjectWindow
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   );
 };

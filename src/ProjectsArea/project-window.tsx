@@ -74,12 +74,23 @@ function ProjectWindow({ project, onClose }: Props) {
         <div className="p-6">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-1/2 w-full">
-              <div className="img-container rounded-md overflow-hidden">
-                <img
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className="w-full h-64 md:h-auto object-cover"
-                />
+              <div className="img-container h-auto md:h-60 rounded-md overflow-hidden bg-black">
+                {project.videoUrl ? (
+                  <video 
+                    src={project.videoUrl}
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-64 md:h-full object-scale-down"
+                    
+                  />
+                ) : (
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-64 md:h-full object-scale-down"
+                  />
+                )}
               </div>
             </div>
 
