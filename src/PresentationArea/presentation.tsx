@@ -36,10 +36,7 @@ function PresentationArea({social}: Props) {
         <h1 className="name text-2xl sm:text-3xl md:text-3xl font-bold">LEONARDO A. CORNIELES MAS Y RUBI</h1>
         <h2 className="profession text-lg text-gray-500 sm:text-2xl mt-1">FRONTEND DEVELOPER</h2>
         <p className="aboutme mt-3 text-sm text-gray-700">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-          voluptas ex debitis consequuntur laboriosam incidunt minima facilis,
-          in fugit harum sapiente eveniet repellendus quod nobis assumenda nam
-          necessitatibus? Rerum, autem!
+          Hi! I'm a developer with strong expertise in React, TypeScript and more. Experienced in building responsive, scalable, and user-friendly web applications. Skilled in collaborating with product managers, designers, and backend engineers to deliver intuitive interfaces. Proficient in API integration, state management (Context API), and UI/UX best practices. Passionate about modern frontend development, accessibility, and delivering clean, reusable code in fast-paced, innovative environments.
         </p>
 
         <div className="social-media flex flex-wrap gap-2 justify-center md:justify-start mt-4">

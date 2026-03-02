@@ -3,70 +3,38 @@ import type { Project } from "../models/project";
 export const projectsList: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "DevSnap - CV Builder",
     description:
-      "Una plataforma de comercio electrónico completa con carrito de compras, pagos integrados y panel de administración.",
-    imageUrl: "../../public/images/projects/e-commerce-platform.png",
-    projectUrl: "https://example.com/project1",
-    githubUrl: 'verga.com/example/project1',
+      "I designed and developed a CV builder web application that helps developers create professional resumes following industry standards. The app features an user-friendly interface with customizable templates, real-time previews, and easy export options. I implemented the frontend using React and styled it with Sass CSS, ensuring a responsive design that works seamlessly across devices.",
+    imageUrl: "../../public/images/projects/devsnap.png",
+    projectUrl: "https://devsnap-cvbuilder.netlify.app/",
+    githubUrl: 'https://github.com/Lacmyr1101/DevSnap',
     technologies: [
       "React",
-      "Next.js",
-      "TypeScript",
-      "Stripe",
-      "Tailwind CSS",
+      "Sass CSS",
     ],
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "TypeMe - English Version",
     description:
-      "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones.",
-    imageUrl: "../../public/images/projects/task-management-app.png",
-    projectUrl: "https://example.com/project2",
-    githubUrl: 'verga.com/example/project2',
-    technologies: ["React", "Firebase", "Material-UI", "Redux"],
+      "I created a gamified web environment to help students improve typing skills with an english keyboard. The app features  an interactive typing exercise, real-time feedback, and engaging challenges to make learning fun. I developed the frontend using JavaScript and styled it with Sass CSS. Only available for desktop.",
+    imageUrl: "../../public/images/projects/typeme.png",
+    projectUrl: "https://typeme-english-lacmyr.netlify.app/",
+    githubUrl: 'https://github.com/Lacmyr1101/TypeMe-English-Version',
+    technologies: ["JavaScript", "Sass CSS"] ,
   },
   {
     id: 3,
-    title: "Weather Dashboard",
+    title: "TypeMe - Spanish Version",
     description:
-      "Dashboard meteorológico con pronósticos detallados, mapas interactivos y alertas personalizadas.",
-    imageUrl: "../../public/images/projects/weather-dashboard.png",
-    projectUrl: "https://example.com/project3",
-    githubUrl: 'verga.com/example/project3',
-    technologies: ["Vue.js", "OpenWeather API", "Chart.js", "Sass"],
+      "This is the version of the TypeMe project adapted for Spanish speakers, featuring the same interactive typing environment with a fun challenge designed to improve typing skills using a Spanish keyboard layout. It's optimized for desktop use only.",
+    imageUrl: "../../public/images/projects/typeme.png",
+    projectUrl: "https://typeme-spanish-lacmyr.netlify.app/",
+    githubUrl: 'https://github.com/Lacmyr1101/TypeMe-Spanish-Version',
+    technologies: ["JavaScript", "Sass CSS"] ,
   },
-  {
-    id: 4,
-    title: "Social Media Analytics",
-    description:
-      "Herramienta de análisis de redes sociales con métricas en tiempo real y reportes automatizados.",
-    imageUrl: "../../public/images/projects/social-media-analytics.png",
-    projectUrl: "https://example.com/project4",
-    githubUrl: 'verga.com/example/project4',
-    technologies: ["React", "D3.js", "Node.js", "MongoDB"],
-  },
-  {
-    id: 5,
-    title: "Portfolio Builder",
-    description:
-      "Constructor de portfolios con plantillas personalizables, editor visual y hosting integrado.",
-    imageUrl: "../../public/images/projects/portfolio-builder.png",
-    projectUrl: "https://example.com/project5",
-    githubUrl: 'verga.com/example/project5',
-    technologies: ["Next.js", "Prisma", "PostgreSQL", "Vercel"],
-  },
-  {
-    id: 6,
-    title: "Fitness Tracker",
-    description:
-      "Aplicación de seguimiento de fitness con planes de entrenamiento, estadísticas y comunidad.",
-    imageUrl: "../../public/images/projects/fitness-tracker.png",
-    projectUrl: "https://example.com/project6",
-    githubUrl: 'verga.com/example/project6',
-    technologies: ["React Native", "Expo", "Supabase", "TypeScript"],
-  },
+  
 ];
 
 export default projectsList;

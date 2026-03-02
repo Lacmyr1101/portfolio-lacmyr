@@ -23,7 +23,7 @@ const ProjectItem = ({ project, onOpen }: { project: Project; onOpen?: () => voi
       </div>
 
       <div className="card-overlay">
-        <span className="card-overlay-hover">Mas Informacion</span>
+        <span className="card-overlay-hover">More info</span>
       </div>
     </div>
   );
