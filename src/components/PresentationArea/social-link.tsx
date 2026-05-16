@@ -1,4 +1,4 @@
-import type { Social } from "../models/social";
+import type { Social } from "../../models/social";
 // import { IonIcon } from '@ionic/react';
 // import { logoIonic } from 'ionicons/icons';
 
@@ -17,7 +17,7 @@ function SocialLink(social: Omit<Social, "id">) {
     >
       <span className="social-icon">
         {/* <IonIcon icon={logoIonic}></IonIcon> */}
-        <img src={social.iconURL} alt={social.name} className="inline-block w-5 h-5 mr-2" />
+        <img src={social.iconURL} alt={social.name} className="inline-block size-5 mr-2" />
       </span>
       <span className="social-name">
         {social.name}

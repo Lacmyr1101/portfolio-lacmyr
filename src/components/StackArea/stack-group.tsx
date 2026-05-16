@@ -1,5 +1,5 @@
-import { technologiesStack } from "../data/technologies-stack";
-import TechIcon from "../tech-icons";
+import { technologiesStack } from "../../data/technologies-stack";
+import TechIcon from "../TechIcons/tech-icons";
 
 
 function StackGroup() {

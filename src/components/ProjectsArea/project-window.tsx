@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import type { Project } from "../models/project";
-import TechIcon from "../tech-icons";
+import type { Project } from "../../models/project";
+import TechIcon from "../TechIcons/tech-icons";
 
 type Props = {
   project: Project | null;
@@ -19,7 +19,7 @@ function ProjectWindow({ project, onClose }: Props) {
     return () => window.removeEventListener("keydown", onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  
   useEffect(() => {
     // when mounted with a project, trigger enter animation
     if (project) {
@@ -66,7 +66,7 @@ function ProjectWindow({ project, onClose }: Props) {
         <button
           onClick={handleClose}
           aria-label="Cerrar ventana"
-          className="absolute top-3 right-3 bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300"
+          className="absolute top-3 right-3 bg-gray-200 rounded-full size-8 flex items-center justify-center hover:bg-gray-300"
         >
           X
         </button>
@@ -74,7 +74,7 @@ function ProjectWindow({ project, onClose }: Props) {
         <div className="p-6">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-1/2 w-full">
-              <div className="img-container h-auto md:h-60 rounded-md overflow-hidden bg-black">
+              <div className="img-container h-auto md:h-60 rounded-md overflow-hidden bg-gray-950">
                 {project.videoUrl ? (
                   <video 
                     src={project.videoUrl}
@@ -97,7 +97,7 @@ function ProjectWindow({ project, onClose }: Props) {
             <div className="md:w-1/2 w-full">
               <h2
                 id="project-window-title"
-                className="text-6xl text-left font-bold mb-3 text-gray-900"
+                className="text-6xl text-left font-semibold mb-3 text-gray-900"
               >
                 {project.title}
               </h2>

@@ -1,8 +1,8 @@
 import "./App.css";
 import "./App.css";
-import PresentationArea from "./PresentationArea/presentation";
-import ProjectsGrid from "./ProjectsArea/projects";
-import StackArea from "./StackArea/stack-area";
+import PresentationArea from "./components/PresentationArea/presentation";
+import ProjectsGrid from "./components/ProjectsArea/projects";
+import StackArea from "./components/StackArea/stack-area";
 import { projectsList } from "./data/projects";
 import { socialLinks } from "./data/social-info";
 

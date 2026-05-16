@@ -1,4 +1,4 @@
-import type { Social } from "../models/social";
+import type { Social } from "../../models/social";
 import SocialLink from "./social-link";
 
 interface Props {

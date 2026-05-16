@@ -22,6 +22,7 @@ import {
   SiMysql,
   SiGit,
 } from "react-icons/si";
+import { Circle } from "./tech-icons-circle";
 
 export default function TechIcon({ tech, size = 20 }: { tech: string; size?: number }) {
   const key = tech.toLowerCase();
@@ -36,7 +37,6 @@ export default function TechIcon({ tech, size = 20 }: { tech: string; size?: num
   if (/^(javascript|js)$/.test(key) || /javascript/.test(key))
     return <SiJavascript size={size} title={tech} aria-label={tech} />;
   if (/php/.test(key)) return <SiPhp size={size} title={tech} aria-label={tech} />;
-  // material / mui: no hay icono específico en 'si' con nombre consistente; usar fallback
   if (/redux/.test(key)) return <SiRedux size={size} title={tech} aria-label={tech} />;
   if (/vue/.test(key)) return <SiVuedotjs size={size} title={tech} aria-label={tech} />;
   if (/node/.test(key)) return <FaNodeJs size={size} title={tech} aria-label={tech} />;
@@ -53,26 +53,12 @@ export default function TechIcon({ tech, size = 20 }: { tech: string; size?: num
   if (/sass/.test(key) || /scss/.test(key)) return <SiSass size={size} title={tech} aria-label={tech} />;
   if (/git/.test(key)) return <SiGit size={size} title={tech} aria-label={tech} />;
 
-  // fallback: letra inicial en un círculo simple (sin dependencia externa)
-  const Circle = ({ label }: { label: string }) => (
-    <span
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: size,
-        height: size,
-        borderRadius: size,
-        background: "#eee",
-        color: "currentColor",
-        fontSize: size * 0.6,
-      }}
-      title={tech}
-      aria-label={tech}
-    >
-      {label}
-    </span>
+  // 2. Usamos el componente llamándolo y pasándole las props necesarias
+  return (
+    <Circle 
+      label={(tech[0] || "?").toUpperCase()} 
+      size={size} 
+      tech={tech} 
+    />
   );
-
-  return <Circle label={(tech[0] || "?").toUpperCase()} />;
 }
