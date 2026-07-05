@@ -9,10 +9,8 @@ export const projectsList: Project[] = [
     imageUrl: "../../public/images/projects/devsnap.png",
     projectUrl: "https://devsnap-cvbuilder.netlify.app/",
     githubUrl: 'https://github.com/Lacmyr1101/DevSnap',
-    technologies: [
-      "React",
-      "Sass CSS",
-    ],
+    technologies: ["React","Sass CSS"],
+    videoUrl: "../../public/videos/projects/devsnap.mp4"
   },
   {
     id: 2,
@@ -22,17 +20,19 @@ export const projectsList: Project[] = [
     imageUrl: "../../public/images/projects/typeme.png",
     projectUrl: "https://typeme-english-lacmyr.netlify.app/",
     githubUrl: 'https://github.com/Lacmyr1101/TypeMe-English-Version',
-    technologies: ["JavaScript", "Sass CSS"] ,
+    technologies: ["JavaScript", "Sass CSS"],
+    videoUrl: "../../public/videos/projects/typeme.mp4"
   },
   {
     id: 3,
     title: "TypeMe - Spanish Version",
     description:
       "This is the version of the TypeMe project adapted for Spanish speakers, featuring the same interactive typing environment with a fun challenge designed to improve typing skills using a Spanish keyboard layout. It's optimized for desktop use only.",
-    imageUrl: "../../public/images/projects/typeme.png",
+    imageUrl: "../../public/images/projects/typeme-es.png",
     projectUrl: "https://typeme-spanish-lacmyr.netlify.app/",
     githubUrl: 'https://github.com/Lacmyr1101/TypeMe-Spanish-Version',
-    technologies: ["JavaScript", "Sass CSS"] ,
+    technologies: ["JavaScript", "Sass CSS"],
+    videoUrl: "../../public/videos/projects/typeme-es.mp4"
   },
   
 ];

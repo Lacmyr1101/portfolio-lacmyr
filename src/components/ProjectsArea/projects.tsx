@@ -22,6 +22,20 @@ const ProjectsGrid = ({ project }: Props) => {
               onOpen={() => setSelectedProject(proj)}
             />
           ))}
+          {project.map((proj) => (
+            <ProjectItem
+              key={proj.id}
+              project={proj}
+              onOpen={() => setSelectedProject(proj)}
+            />
+          ))}
+          {project.map((proj) => (
+            <ProjectItem
+              key={proj.id}
+              project={proj}
+              onOpen={() => setSelectedProject(proj)}
+            />
+          ))}
         </div>
       </div>
 

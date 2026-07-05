@@ -45,7 +45,7 @@ function ProjectWindow({ project, onClose }: Props) {
   return (
     // backdrop
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-200 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-200 backdrop-blur-sm bg-black/50 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
       onClick={handleClose}
