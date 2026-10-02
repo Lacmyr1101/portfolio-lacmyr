@@ -1,15 +1,16 @@
 import "./App.css";
-import "./App.css";
+import Background from "./components/background";
 import PresentationArea from "./components/PresentationArea/presentation";
-import ProjectsGrid from "./components/ProjectsArea/projects";
-import StackArea from "./components/StackArea/stack-area";
-import { projectsList } from "./data/projects";
 import { socialLinks } from "./data/social-info";
+import ProjectsGrid from "./components/ProjectsArea/projects";
+import { projectsList } from "./data/projects";
+import StackArea from "./components/StackArea/stack-area";
 
 function App() {
   return (
     <>
-      <div className="warning-overlay">
+      <Background />
+      {/* <div className="warning-overlay">
         <div className="warning-content">
           <h1>¡Atención!</h1>
           <p>
@@ -20,7 +21,7 @@ function App() {
             Ta bien
           </button>
         </div>
-      </div>
+      </div> */}
       <PresentationArea social={socialLinks} />
       <ProjectsGrid project={projectsList} />
       <StackArea />
