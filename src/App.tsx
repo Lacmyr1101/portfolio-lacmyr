@@ -5,24 +5,15 @@ import { socialLinks } from "./data/social-info";
 import ProjectsGrid from "./components/ProjectsArea/projects";
 import { projectsList } from "./data/projects";
 import StackArea from "./components/StackArea/stack-area";
+import ExperienceArea from "./components/ExperienceArea/experience-area";
+import { experienceList } from "./data/experience";
 
 function App() {
   return (
     <>
       <Background />
-      {/* <div className="warning-overlay">
-        <div className="warning-content">
-          <h1>¡Atención!</h1>
-          <p>
-            Este sitio web está en desarrollo y puede contener errores o
-            información incompleta. ¡Gracias por tu comprensión!
-          </p>
-          <button className="close-button" onClick={() => document.querySelector('.warning-overlay')?.remove()}>
-            Ta bien
-          </button>
-        </div>
-      </div> */}
       <PresentationArea social={socialLinks} />
+      <ExperienceArea experiences={experienceList} />
       <ProjectsGrid project={projectsList} />
       <StackArea />
     </>
