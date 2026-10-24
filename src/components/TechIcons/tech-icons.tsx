@@ -11,7 +11,7 @@ import {
   SiVercel,
   SiExpo,
   SiSupabase,
-  SiD3Dotjs,
+  SiD3,
   SiSass,
   SiStripe,
   SiNextdotjs,
@@ -48,7 +48,7 @@ export default function TechIcon({ tech, size = 20 }: { tech: string; size?: num
   if (/vercel/.test(key)) return <SiVercel size={size} title={tech} aria-label={tech} />;
   if (/expo/.test(key)) return <SiExpo size={size} title={tech} aria-label={tech} />;
   if (/supabase/.test(key)) return <SiSupabase size={size} title={tech} aria-label={tech} />;
-  if (/d3/.test(key)) return <SiD3Dotjs size={size} title={tech} aria-label={tech} />;
+  if (/d3/.test(key)) return <SiD3 size={size} title={tech} aria-label={tech} />;
   if (/chart/.test(key)) return <SiChartdotjs size={size} title={tech} aria-label={tech} />;
   if (/sass/.test(key) || /scss/.test(key)) return <SiSass size={size} title={tech} aria-label={tech} />;
   if (/git/.test(key)) return <SiGit size={size} title={tech} aria-label={tech} />;

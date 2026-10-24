@@ -44,7 +44,7 @@ function PresentationArea({ social }: Props) {
         <div className="social-media flex flex-wrap gap-2 justify-center md:justify-start mt-4">
           <button
             onClick={handleDownload}
-            className="px-3 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-400 text-sm w-full md:w-auto transition-all duration-300"
+            className="px-3 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-400 text-sm w-full md:w-auto transition-colors duration-300"
           >
             Download CV
           </button>

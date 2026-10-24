@@ -10,7 +10,7 @@ const ProjectItem = ({
   onOpen?: () => void;
 }) => {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLButtonElement>(null);
   const [titleWraps, setTitleWraps] = useState(false);
 
   useLayoutEffect(() => {
@@ -42,15 +42,11 @@ const ProjectItem = ({
   }, [project.title]);
 
   return (
-    <div
+    <button
+      type="button"
       ref={cardRef}
-      className="relative h-96 overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer border border-gray-300 rounded-2xl bg-gray-900/20 backdrop-blur-sm hover:border-gray-200"
+      className="relative h-96 w-full overflow-hidden transition-[transform,border-color] duration-300 hover:scale-105 cursor-pointer border border-gray-300 rounded-2xl bg-gray-900/20 backdrop-blur-sm text-left hover:border-gray-200"
       onClick={() => onOpen?.()}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") onOpen?.();
-      }}
     >
       <div className="relative h-48 overflow-hidden">
         <img
@@ -82,8 +78,8 @@ const ProjectItem = ({
         <span className="text-white text-3xl font-semibold">More info</span>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_0_30px_rgba(200,200,200,0.5)] hover:shadow-[inset_0_0_30px_rgba(243, 243, 243, 0.5)]  transition-all duration-300" />
-    </div>
+      <div className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_0_30px_rgba(200,200,200,0.5)] hover:shadow-[inset_0_0_30px_rgba(243, 243, 243, 0.5)]  transition-shadow duration-300" />
+    </button>
   );
 };
 
