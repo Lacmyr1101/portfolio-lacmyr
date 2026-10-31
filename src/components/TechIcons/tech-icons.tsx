@@ -21,6 +21,7 @@ import {
   SiPhp,
   SiMysql,
   SiGit,
+  SiN8N,
 } from "react-icons/si";
 import { Circle } from "./tech-icons-circle";
 
@@ -52,6 +53,7 @@ export default function TechIcon({ tech, size = 20 }: { tech: string; size?: num
   if (/chart/.test(key)) return <SiChartdotjs size={size} title={tech} aria-label={tech} />;
   if (/sass/.test(key) || /scss/.test(key)) return <SiSass size={size} title={tech} aria-label={tech} />;
   if (/git/.test(key)) return <SiGit size={size} title={tech} aria-label={tech} />;
+  if (/^n8n$/.test(key)) return <SiN8N size={size} title={tech} aria-label={tech} />;
 
   // 2. Usamos el componente llamándolo y pasándole las props necesarias
   return (

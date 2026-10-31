@@ -4,14 +4,14 @@ export const socialLinks: Social[] = [
   {
     id: 1,
     name: "GitHub",
-    iconURL: "../../public/images/presentation/icons/github.png",
+    iconURL: "/images/presentation/icons/github.png",
     url: "https://github.com/Lacmyr1101",
     colors: ["#333333", "#6e5494"],
   },
   {
     id: 2,
     name: "LinkedIn",
-    iconURL: "../../public/images/presentation/icons/linkedin.svg",
+    iconURL: "/images/presentation/icons/linkedin.svg",
     url: "https://www.linkedin.com/in/leonardo-cornieles-78b9b5207/",
     colors: ["#0A66C2", "#004182"],
   },

@@ -14,9 +14,10 @@ function App() {
     <>
       <Background />
       <PresentationArea social={socialLinks} />
+      <StackArea />
       <ExperienceArea experiences={experienceList} />
       <ProjectsGrid project={projectsList} />
-      <StackArea />
+      
     </>
   );
 }

@@ -52,13 +52,15 @@ const ProjectItem = ({
         <img
           src={project.imageUrl}
           alt={project.title}
+          loading="lazy"
+          decoding="async"
           className="size-full object-cover object-center"
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-[linear-gradient(to_right,rgba(0,0,0,1),rgba(255,255,255,1),rgba(0,0,0,1))]" />
       </div>
 
       <div className={titleWraps ? "p-3" : "p-6"}>
-        <h3 ref={titleRef} className="text-white font-bold mb-4 text-xl">
+        <h3 ref={titleRef} className="text-white font-bold mb-4 text-xl text-center">
           {project.title}
         </h3>
         <div

@@ -10,6 +10,8 @@ interface Props {
 
 function ExperienceArea({ experiences }: Props) {
   const cardsRef = useRef<HTMLDivElement>(null);
+  const highlightedCardsRef = useRef(new Map<number, HTMLElement>());
+  const reversedExperiences = experiences.slice().reverse();
 
   const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
     const cards = cardsRef.current;
@@ -27,25 +29,41 @@ function ExperienceArea({ experiences }: Props) {
 
   return (
     <section className="experience-area">
-      <h2 className="experience-area__heading">Professional Experience</h2>
+      <h2 className="text-7xl font-bold">Professional Experience</h2>
       <div
-        className="experience-cards"
+        className="experience-cards mt-4"
         ref={cardsRef}
         onPointerMove={handlePointerMove}
         onPointerLeave={handlePointerLeave}
       >
         <div className="experience-cards__inner">
-          {experiences.slice().reverse().map((experience) => (
-            <ExperienceCard key={experience.id} experience={experience} />
+          {reversedExperiences.map((experience) => (
+            <ExperienceCard
+              key={experience.id}
+              experience={experience}
+              onScroll={(scrollTop) => {
+                const highlightedCard = highlightedCardsRef.current.get(
+                  experience.id,
+                );
+                if (highlightedCard) highlightedCard.scrollTop = scrollTop;
+              }}
+            />
           ))}
           
         </div>
         <div className="experience-cards__spotlight" aria-hidden="true">
-          {experiences.slice().reverse().map((experience) => (
+          {reversedExperiences.map((experience) => (
             <ExperienceCard
               key={experience.id}
               experience={experience}
               highlighted
+              scrollRef={(element) => {
+                if (element) {
+                  highlightedCardsRef.current.set(experience.id, element);
+                } else {
+                  highlightedCardsRef.current.delete(experience.id);
+                }
+              }}
             />
           ))}
           

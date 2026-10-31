@@ -1,15 +1,6 @@
 .experience-area {
   width: min(90%, 75rem);
-  margin: 0 auto 2rem;
-  padding: 2rem 1rem;
-}
-
-.experience-area__heading {
-  margin: 0 0 2rem;
-  color: #eceff1;
-  font-size: clamp(2.25rem, 5vw, 4.5rem);
-  font-weight: 700;
-  text-align: center;
+  margin: 0 auto 1rem;
 }
 
 .experience-cards {
@@ -24,6 +15,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
   gap: 2rem;
+  padding: 1rem 2rem;
 }
 
 .experience-cards__spotlight {
@@ -48,9 +40,12 @@
 .experience-card {
   display: flex;
   min-width: 0;
+  max-height: 32rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  overflow-y: auto;
+  scrollbar-width: none;
   padding: 1.5rem;
   color: #eceff1;
   background-color: rgba(255, 255, 255, 0.05);
@@ -62,6 +57,10 @@
   transition:
     background-color 400ms ease,
     border-color 400ms ease;
+}
+
+.experience-card::-webkit-scrollbar {
+  display: none;
 }
 
 .experience-card__company {

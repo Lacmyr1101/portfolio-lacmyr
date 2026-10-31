@@ -4,6 +4,8 @@ import type { Experience } from "../../models/experience";
 interface Props {
   experience: Experience;
   highlighted?: boolean;
+  onScroll?: (scrollTop: number) => void;
+  scrollRef?: (element: HTMLElement | null) => void;
 }
 
 type ExperienceCardStyle = CSSProperties & {
@@ -20,7 +22,12 @@ function formatDate(date: Date) {
   return dateFormatter.format(date);
 }
 
-function ExperienceCard({ experience, highlighted = false }: Props) {
+function ExperienceCard({
+  experience,
+  highlighted = false,
+  onScroll,
+  scrollRef,
+}: Props) {
   const cardStyle: ExperienceCardStyle = {
     "--experience-color": experience.color,
   };
@@ -29,6 +36,8 @@ function ExperienceCard({ experience, highlighted = false }: Props) {
     <article
       className={`experience-card${highlighted ? " experience-card--highlight" : ""}`}
       style={cardStyle}
+      ref={scrollRef}
+      onScroll={(event) => onScroll?.(event.currentTarget.scrollTop)}
     >
       <h3 className="experience-card__company">{experience.company}</h3>
       <p className="experience-card__position">{experience.position}</p>

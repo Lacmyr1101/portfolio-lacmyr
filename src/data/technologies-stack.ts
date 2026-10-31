@@ -14,4 +14,5 @@ export const technologiesStack: Tech[] = [
   { id: "git", name: "Git", color: "#F05032" },
   { id: "python", name: "Python", color: "#3776AB" },
   { id: "php", name: "PHP", color: "#777BB4" },  
+  { id: "n8n", name: "n8n", color: "#EA4B71" },
 ];

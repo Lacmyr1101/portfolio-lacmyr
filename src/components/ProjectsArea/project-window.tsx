@@ -20,7 +20,12 @@ function ProjectWindow({ project, onClose }: Props) {
       return;
     }
 
-    dialog.showModal();
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "open");
+    }
+
     const animationFrame = requestAnimationFrame(() => setVisible(true));
 
     return () => {
@@ -29,7 +34,9 @@ function ProjectWindow({ project, onClose }: Props) {
         window.clearTimeout(closeTimeoutRef.current);
         closeTimeoutRef.current = null;
       }
-      if (dialog.open) dialog.close();
+      if (dialog.open && typeof dialog.close === "function") {
+        dialog.close();
+      }
     };
   }, [project]);
 
@@ -41,7 +48,10 @@ function ProjectWindow({ project, onClose }: Props) {
     setVisible(false);
     closeTimeoutRef.current = window.setTimeout(() => {
       closeTimeoutRef.current = null;
-      dialogRef.current?.close();
+      const dialog = dialogRef.current;
+      if (dialog && typeof dialog.close === "function" && dialog.open) {
+        dialog.close();
+      }
       onClose();
     }, 220);
   }
@@ -98,6 +108,7 @@ function ProjectWindow({ project, onClose }: Props) {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
+                    decoding="async"
                     className="w-full h-64 md:h-full object-cover"
                   />
                 )}
@@ -117,7 +128,7 @@ function ProjectWindow({ project, onClose }: Props) {
                 {project.technologies.map((t) => (
                   <span
                     key={t}
-                    className="inline-flex items-center rounded-mdtext-gray-100/50"
+                    className="inline-flex items-center rounded-md text-gray-100/50"
                   >
                     <TechIcon tech={t} size={40} />
                   </span>
