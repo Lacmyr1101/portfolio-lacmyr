@@ -8,7 +8,7 @@ interface Props {
 
 function PresentationArea({ social }: Props) {
   const handleDownload = () => {
-    const fileUrl = "/documents/CV_Leonardo_Cornieles.pdf";
+    const fileUrl = `${import.meta.env.BASE_URL}documents/CV_Leonardo_Cornieles.pdf`;
     const fileName = "CV_Leonardo_Cornieles.pdf";
     const link = document.createElement("a");
     link.href = fileUrl;

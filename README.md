@@ -1,5 +1,11 @@
 # React + TypeScript + Vite
 
+## Deploy to GitHub Pages
+
+Run `npm run deploy` to build the portfolio and publish the `dist` folder to
+the `gh-pages` branch. In the repository's GitHub Pages settings, select
+`Deploy from a branch` and choose `gh-pages` / `/(root)`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
