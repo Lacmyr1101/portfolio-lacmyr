@@ -29,7 +29,7 @@ function ExperienceArea({ experiences }: Props) {
 
   return (
     <section className="experience-area">
-      <h2 className="text-7xl font-bold">Professional Experience</h2>
+      <h2 className="text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">Professional Experience</h2>
       <div
         className="experience-cards mt-4"
         ref={cardsRef}
